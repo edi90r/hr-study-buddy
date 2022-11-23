@@ -5,11 +5,11 @@ import Badge from 'components/atoms/Badge/Badge';
 import UsersListItemInfo from 'components/atoms/UsersListItemInfo/UsersListItemInfo';
 import Button from 'components/atoms/Button/Button';
 
-const UsersListItem = ({ userData: { average, name, attendance = '0%' } }) => (
+const UsersListItem = ({ deleteUser, userData: { average, name, attendance = '0%' } }) => (
   <Wrapper>
     <Badge average={average} />
     <UsersListItemInfo name={name} attendance={attendance} />
-    <Button />
+    <Button onClick={() => deleteUser(name)} />
   </Wrapper>
 );
 
