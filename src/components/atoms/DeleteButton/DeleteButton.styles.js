@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const StyledButton = styled.button`
+export const StyledDeleteButton = styled.button`
   width: 25px;
   height: 25px;
   background-color: ${({ theme }) => theme.colors.grey};

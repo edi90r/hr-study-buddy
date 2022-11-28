@@ -1,8 +1,12 @@
 import React from 'react';
-import styled, { ThemeProvider } from 'styled-components';
-import UsersList from 'components/organisms/UsersList/UsersList';
-import GlobalStyle from 'assets/icons/styles/globalStyle';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import theme from 'assets/icons/styles/theme';
+import styled, { ThemeProvider } from 'styled-components';
+import UsersProvider from 'providers/UsersProvider';
+import GlobalStyle from 'assets/icons/styles/globalStyle';
+import AddUser from './AddUser';
+import Dashboard from './Dashboard';
+import MainTemplate from 'components/templates/MainTemplate/MainTemplate';
 
 const Wrapper = styled.div`
   background: ${({ theme }) => theme.colors.lightGrey};
@@ -13,13 +17,25 @@ const Wrapper = styled.div`
   height: 100vh;
 `;
 
-const Root = () => (
-  <ThemeProvider theme={theme}>
-    <GlobalStyle />
-    <Wrapper>
-      <UsersList />
-    </Wrapper>
-  </ThemeProvider>
-);
+const Root = () => {
+  return (
+    <Router>
+      <ThemeProvider theme={theme}>
+        <GlobalStyle />
+        <MainTemplate>
+          <UsersProvider>
+            <Wrapper>
+              <Routes>
+                <Route path="/" element={<Dashboard />} />
+
+                <Route path="add-user" element={<AddUser />} />
+              </Routes>
+            </Wrapper>
+          </UsersProvider>
+        </MainTemplate>
+      </ThemeProvider>
+    </Router>
+  );
+};
 
 export default Root;
