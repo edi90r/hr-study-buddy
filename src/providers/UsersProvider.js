@@ -25,7 +25,11 @@ const UsersProvider = ({ children }) => {
     setUsers([newUser, ...users]);
   };
 
-  return <UserContext.Provider value={{ users, handleAddUser, deleteUser }}>{children}</UserContext.Provider>;
+  return (
+    <UserContext.Provider value={{ users, handleAddUser, deleteUser }}>
+      {children}
+    </UserContext.Provider>
+  );
 };
 
 export default UsersProvider;
