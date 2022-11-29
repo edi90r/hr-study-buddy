@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import theme from 'assets/icons/styles/theme';
+import theme from 'assets/styles/theme';
 
 const choosingColorBadge = (average) => {
   if (average <= 2) {
