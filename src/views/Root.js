@@ -1,9 +1,9 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import theme from 'assets/icons/styles/theme';
+import theme from 'assets/styles/theme';
 import styled, { ThemeProvider } from 'styled-components';
 import UsersProvider from 'providers/UsersProvider';
-import GlobalStyle from 'assets/icons/styles/globalStyle';
+import GlobalStyle from 'assets/styles/globalStyle';
 import AddUser from './AddUser';
 import Dashboard from './Dashboard';
 import MainTemplate from 'components/templates/MainTemplate/MainTemplate';
