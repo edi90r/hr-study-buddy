@@ -1,6 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Wrapper, StyledName, StyledAttendance } from './UserListItemonfo.styles';
+import {
+  Wrapper,
+  StyledName,
+  StyledAttendance,
+} from './UserListItemonfo.styles';
 
 const UsersListItemInfo = ({ name, attendance }) => (
   <Wrapper>

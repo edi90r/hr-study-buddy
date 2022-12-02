@@ -2,20 +2,22 @@ import styled from 'styled-components';
 import { NavLink } from 'react-router-dom';
 
 export const Wrapper = styled.nav`
-  width: 100%;
-  height: 100%;
-  padding: 30px 0;
+  grid-column: 1/2;
+  grid-row: 1/3;
   display: flex;
   flex-direction: column;
   align-items: flex-end;
+  width: 100%;
+  height: 100%;
+  padding: 30px 0;
   border-right: 1px solid ${({ theme }) => theme.colors.darkPurple};
 `;
 
 export const Logo = styled.div`
-  width: 100%;
-  height: 60px;
   display: flex;
   justify-content: flex-end;
+  width: 100%;
+  height: 60px;
   background-color: ${({ theme }) => theme.colors.darkGrey};
   margin-bottom: 30px;
 
