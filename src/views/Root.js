@@ -9,12 +9,14 @@ import Dashboard from './Dashboard';
 import MainTemplate from 'components/templates/MainTemplate/MainTemplate';
 
 const Wrapper = styled.div`
-  background: ${({ theme }) => theme.colors.lightGrey};
+  grid-column: 2/3;
+  grid-row: 2/3;
   display: flex;
   justify-content: center;
   align-items: center;
   width: 100%;
-  height: 100vh;
+  height: 100%;
+  background: ${({ theme }) => theme.colors.lightGrey};
 `;
 
 const Root = () => {
