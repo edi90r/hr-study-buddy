@@ -15,7 +15,6 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "preinstall": "npx npm-force-resolutions",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --transformIgnorePatterns 'node_modules/(?!my-library-dir)/'",
@@ -49,6 +48,7 @@
     "eslint-plugin-prettier": "^4.2.1",
     "husky": "^8.0.2",
     "lint-staged": "^13.0.3",
+    "msw": "^0.49.1",
     "prettier": "^2.7.1"
   },
   "overrides": {
@@ -59,16 +59,11 @@
             "cliui": "8.0.1"
           }
         }
-      },
-      "svgo": "3.0.0",
-      "workbox-webpack-plugin@6.5.4": {
-        "workbox-build@6.5.4": {
-          "@rollup/plugin-terser": "https://registry.npmjs.org/@rollup/plugin-terser/-/plugin-terser-0.1.0.tgz"
-        }
       }
-    }
+    },
+    "svgo": "3.0.0"
   },
-  "resolutions": {
-    "rollup-plugin-terser": "https://registry.npmjs.org/@rollup/plugin-terser/-/plugin-terser-0.1.0.tgz"
+  "msw": {
+    "workerDirectory": "public"
   }
 }
