@@ -2,7 +2,7 @@ import React, { useContext } from 'react';
 import { ViewWrapper } from 'components/molecules/ViewWrapper/ViewWrapper';
 import FormField from 'components/molecules/FormField/FormField';
 import { Title } from 'components/atoms/Title/Title.styles';
-import { Button } from 'components/atoms/Button/Button';
+import Button from 'components/atoms/Button/Button';
 import { UserContext } from 'providers/UsersProvider';
 import { useWindowHeight } from 'hooks/useWindowSize';
 import { useForm } from 'hooks/useForm';
