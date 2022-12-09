@@ -1,8 +1,12 @@
 import React from 'react';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import {
+  BrowserRouter as Router,
+  Navigate,
+  Route,
+  Routes,
+} from 'react-router-dom';
 import theme from 'assets/styles/theme';
 import styled, { ThemeProvider } from 'styled-components';
-import UsersProvider from 'providers/UsersProvider';
 import GlobalStyle from 'assets/styles/globalStyle';
 import AddUser from './AddUser';
 import Dashboard from './Dashboard';
@@ -12,6 +16,7 @@ const Wrapper = styled.div`
   grid-column: 2/3;
   grid-row: 2/3;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   width: 100%;
@@ -25,15 +30,21 @@ const Root = () => {
       <ThemeProvider theme={theme}>
         <GlobalStyle />
         <MainTemplate>
-          <UsersProvider>
-            <Wrapper>
-              <Routes>
-                <Route path="/" element={<Dashboard />} />
+          <Wrapper>
+            <Routes>
+              <Route
+                path="/"
+                exact
+                element={<Navigate to="/group" replace />}
+              />
+              <Route path="/group">
+                <Route index element={<Dashboard />} />
+                <Route path=":id" element={<Dashboard />} />
+              </Route>
 
-                <Route path="add-user" element={<AddUser />} />
-              </Routes>
-            </Wrapper>
-          </UsersProvider>
+              <Route path="add-user" element={<AddUser />} />
+            </Routes>
+          </Wrapper>
         </MainTemplate>
       </ThemeProvider>
     </Router>

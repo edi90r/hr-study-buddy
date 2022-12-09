@@ -6,7 +6,7 @@ import {
   TitleWrapper,
   ContentWrapper,
 } from './NewsSection.styles';
-import { Button } from 'components/atoms/Button/Button';
+import Button from 'components/atoms/Button/Button';
 import axios from 'axios';
 
 export const query = `

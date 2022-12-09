@@ -30,6 +30,7 @@ export const ArticleWrapper = styled(ViewWrapper)`
 `;
 
 export const TitleWrapper = styled.div`
+  color: ${({ theme }) => theme.colors.darkGrey};
   h3 {
     margin: 0;
     font-size: ${({ theme }) => theme.fontSize.xl};
